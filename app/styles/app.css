@@ -1,0 +1,60 @@
+/*@viewport { zoom: 1; }*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
+.authHide {display: none;}
+
+.no-pad-right {
+padding-right: 0;
+}
+.no-pad-left{
+padding-left: 0;
+}
+.small-pad-right {
+padding-right: 2;
+}
+.small-pad-left{
+padding-left: 2;
+}
+.ng-table {
+    border: 1px solid #000;
+}
+.max-width-table {
+  width:100%;
+}
+.thin-border {
+    border: 1px solid #000;
+}
+.collapsible {
+  border: 1px solid gray;
+}
+.collapsible section {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .5s ease-in-out;
+}
+.collapsible section p {
+  margin: 0;
+  padding: 5px;
+}
+.collapsible section.opened {
+  transition: maxheight .5s ease-in-out;
+  max-height: 100%;
+}
+.collapsible header {
+  border-bottom: 1px solid green;
+  cursor: pointer;
+}
+.collapsible h4 {
+  margin: 0;
+}
+.st-sort-ascent:before{
+    content: '\25B2';
+}
+
+.st-sort-descent:before{
+    content: '\25BC';
+}

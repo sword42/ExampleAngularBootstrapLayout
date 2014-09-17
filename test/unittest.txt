@@ -1,0 +1,2 @@
+run from main dir
+karma start test\karma-unit.conf.js
