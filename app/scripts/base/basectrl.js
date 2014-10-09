@@ -1,8 +1,9 @@
 (function () {'use strict';
-angular.module('applicationname.base').controller('BaseCtrl', BaseCtrl);
+angular.module('demo.base').controller('BaseCtrl', BaseCtrl);
 
 BaseCtrl.$inject = ['$scope'];
 
 function BaseCtrl($scope) {
+	var vm = this;
 }
 })();
