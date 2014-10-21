@@ -1,0 +1,10 @@
+<h3>Login</h3>
+	<form class="form-signin" role="form">
+		<h4 class="form-signin-heading">Please sign in</h4>
+		<input type="email" class="form-control" ng-model="vm.loginInfo.email" placeholder="Email address" required autofocus>
+		<input type="password" class="form-control" ng-model="vm.loginInfo.password" placeholder="Password" required>
+		<label class="checkbox">
+			<input type="checkbox" ng-model="vm.loginInfo.remember" > Remember me
+		</label>
+		<button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="vm.submit(vm.loginInfo)">Sign in</button>
+	</form>
