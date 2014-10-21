@@ -9,7 +9,7 @@ var gutil = plug.loadUtils(['colors', 'env', 'log', 'date']);
  */
 var type = gutil.env.production ? 'production' : 'development';
 gutil.log( 'Building for', gutil.colors.magenta(type) );
-gutil.beep();
+//gutil.beep();
 
 /*
  * Lint the code
@@ -17,16 +17,14 @@ gutil.beep();
 gulp.task('jshint', function () {
     return gulp.src(pkg.paths.source.js)
         .pipe(plug.jshint('.jshintrc'))
-//        .pipe(plug.jshint.reporter('default'));
         .pipe(plug.jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('templates',function(){
     //combine all template files of the app into a js file
-    gulp.src(['!./app/index.html',
-        './app/**/*.html',
-        "!./app/scripts/lib/**/*.html"])
-        .pipe(plug.angularTemplatecache('templates.js',{standalone:true, module:'templates'}))
+    gulp.src([pkg.paths.source.templates])
+        .pipe(plug.angularTemplatecache('servabusi.templates.js',{standalone:true, 
+                                        module:'servabusi.templates'}))
         .pipe(gulp.dest(pkg.paths.dest.js));
 });
 
@@ -55,27 +53,6 @@ gulp.task('copymodernizer',function(){
 });
 
 
-gulp.task('watch',function(){
-    gulp.watch([
-        'build/**/*.html',        
-        'build/**/*.js',
-        'build/**/*.css'        
-    ], function(event) {
-        return gulp.src(event.path)
-            .pipe(plug.connect.reload());
-    });
-    gulp.watch(['./app/**/*.js','!./app/**/*test.js'],['scripts']);
-    gulp.watch(['!./app/index.html','./app/**/*.html'],['templates']);
-    gulp.watch('./app/**/*.css',['css']);
-    gulp.watch('./app/index.html',['copy-index']);
-
-});
-
-gulp.task('connect', plug.connect.server({
-    root: ['build'],
-    port: 9000,
-    livereload: true
-}));
-
-
-gulp.task('default', ['jshint', 'copyviews', 'copyrootfiles', 'copymodernizer', 'usemin']);
+gulp.task('default', ['copymodernizer', 'jshint', 'copyviews', 'copyrootfiles', 
+                'usemin'
+                    ]);
