@@ -42,5 +42,5 @@ function ApplicationRun($rootScope, $state, $stateParams, authService) {
         event.preventDefault();
     }
   });
-};
+}
 })();

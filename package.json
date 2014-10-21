@@ -1,13 +1,13 @@
 {
-  "name": "ExampleAngularBootstrapLayout",
-  "version": "0.0.2",
-  "main": "scripts.js",
-  "devDependencies": {
-    "glob": "^3.2.9",
-    "gulp": "^3.5.5",
-    "gulp-concat": "^2.1.7",
+    "name": "ExampleAngularBootstrapLayout",
+    "version": "0.0.2",
+    "main": "scripts.js",
+    "devDependencies": {
+        "glob": "^3.2.9",
+        "gulp": "^3.5.5",
+        "gulp-concat": "^2.1.7",
         "gulp-uglify": "^0.2.1",
-    "gulp-jshint": "^1.5.0",
+        "gulp-jshint": "^1.5.0",
         "gulp-if": "0.0.5",
         "gulp-imagemin": "^0.1.5",
         "gulp-notify": "^1.1.0",
@@ -18,37 +18,39 @@
         "jshint-stylish": "^0.1.5",
         "gulp-cache": "^0.1.3",
         "gulp-header": "^1.0.2",
-    "gulp-load-plugins": "^0.4.0",
+        "gulp-load-plugins": "^0.4.0",
         "gulp-load-utils": "^0.0.4",
         "chalk": "^0.4.0",
         "dateformat": "^1.0.7-1.2.3",
         "minimist": "^0.0.8",
-    "gulp-angular-templatecache": "^1.1.0",
-    "gulp-connect": "^1.0.7",
-    "karma": "^0.12.1",
-    "karma-jasmine": "^0.1.5",
-    "karma-chrome-launcher": "^0.1.2",
-    "gulp-rev": "^1.1.0"
-  },
+        "gulp-angular-templatecache": "^1.1.0",
+        "gulp-connect": "^1.0.7",
+        "karma": "^0.12.1",
+        "karma-jasmine": "^0.1.5",
+        "karma-chrome-launcher": "^0.1.2",
+        "gulp-rev": "^1.1.0"
+    },
     "author": "Shane Word",
     "dest": "./build/",
     "paths": {
         "source": {
-            "js" : ["./app/scripts/**/*.js",
+            "js": ["./app/scripts/**/*.js",
                     "!./app/scripts/lib/**/*.js",
                     "!./app/scripts/test/**/*.js"],
-            "templates" : ["!./app/*.html",
+            "templates": ["!./app/*.html",
                             "./app/**/*.html",
-                            "!./app/scripts/lib/**/*.html",
-            "index" : ["./app/index.html"],
-            "html" : ["./app/views/**/*"],
-            "rootfiles" : ["./app/404.html", "./app/favicon.ico", "./app/humans.txt", "./app/robots.txt"],
-            "modernizer" : ["./app/scripts/lib/modernizr.custom.74608.js"]
+                            "!./app/scripts/lib/**/*.html"
+                        ],
+            "index": ["./app/index.html"],
+            "html": ["./app/views/**/*"],
+            "rootfiles": ["./app/404.html", "./app/favicon.ico", "./app/humans.txt", "./app/robots.txt"],
+            "modernizer": ["./app/scripts/lib/modernizr.custom.74608.js"]
         },
         "dest": {
-            "base" : "./build/",
-            "js" : "./build/scripts/",
-            "html" : "./build/views/",
-            "jslib" : "./build/scripts/lib/"            
+            "base": "./build/",
+            "js": "./build/scripts/",
+            "html": "./build/views/",
+            "jslib": "./build/scripts/lib/"            
         }
-    }
+}
+}
