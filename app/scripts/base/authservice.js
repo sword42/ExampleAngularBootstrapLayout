@@ -10,6 +10,8 @@ function authService($rootScope) {
 		isLoggedIn: isLoggedIn,
 		auth:auth,
 	};
+	return service;
+	
 	function isLoggedIn() {
 		return loggedIn;
 	}
@@ -20,7 +22,6 @@ function authService($rootScope) {
 	function notifyLoggedIn() {
 		$rootScope.$broadcast('authService:userLoggedIn', loggedIn);
 	}
-	return service;
 
 }
 })();

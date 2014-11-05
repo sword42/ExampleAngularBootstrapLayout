@@ -1,0 +1,16 @@
+<h3>Shoes</h3>
+
+<table st-table="vm.shoesList" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="shoe in vm.shoesList">
+		<td><a ui-sref="viewshoe({shoeId:shoe.id})">{{shoe.id}}</a></td>
+		<td>{{shoe.name}}</td>
+	</tr>
+	</tbody>
+</table>

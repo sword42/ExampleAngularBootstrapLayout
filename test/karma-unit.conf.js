@@ -5,7 +5,7 @@ module.exports = function(config) {
 
   conf.files = conf.files.concat([
     //extra testing code
-     'app/scripts/lib/angular/1.2.24/angular-mocks.js',
+     
 
 
     //test files
