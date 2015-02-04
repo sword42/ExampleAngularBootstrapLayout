@@ -1,5 +1,5 @@
 (function () {'use strict';
-angular.module('demo.shoe', ['demo.config', 'ui.router']);
+angular.module('demo.shoe', ['demo.config', 'ui.router', 'smart-table']);
 
 angular.module('demo.shoe').config(ShoeModule);
 angular.module('demo.shoe').factory('shoeStates', shoeStates);
