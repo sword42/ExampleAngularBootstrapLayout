@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 <head>
+	<base href="/">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>App Name</title>
@@ -58,32 +59,32 @@
 	</div><!-- /.container -->
 
         <!-- build:js scripts/modules.js -->
-
-		<script src="scripts/lib/jquery/2.1.1/jquery-2.1.1.min.js"></script>
-		<script src="scripts/lib/underscore/1.6.0/underscore-min.js"></script>
-		<script src="scripts/lib/moment/2.7.0/moment.js"></script>
-		<script src="scripts/lib/bootstrap/3.2.0/bootstrap.min.js"></script>
-        <script src="scripts/lib/angular/1.2.22/angular.js"></script>
-		<script src="scripts/lib/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-		<script src="scripts/lib/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls-0.11.0.min.js"></script>
-
+		<script src="scripts/lib/underscore/1.8.3/underscore-min.js"></script>
+        <script src="scripts/lib/angular-1.4.1/angular.js"></script>
+		<script src="scripts/lib/moment/2.10.3/moment.js"></script>
+		<script src="scripts/lib/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+		<script src="scripts/lib/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls-0.13.0.min.js"></script>
 		<script src="scripts/lib/localStorageModule.js"></script>
 		<script src="scripts/lib/angular-md5.js"></script>
 		<script src="scripts/lib/ngBase64.js"></script>
-		<script src="scripts/lib/ui-utils.min.js"></script>
-		<script src="scripts/lib/angular-moment-0.7.0.min.js"></script>
+		<script src="scripts/lib/angular-moment/0.10.1/angular-moment.js"></script>
 		<script src="scripts/lib/spin-2.0.1.min.js"></script>
 		<script src="scripts/lib/indiClick-0.0.1.js"></script>
-        <script src="scripts/lib/smart-table/08252014/smart-table.debug.js"></script>
+        <script src="scripts/lib/smart-table/2.1.0/smart-table.js"></script>
         <!-- endbuild -->		
 		
-		<!-- build:js scripts/scripts.js -->
+		<!-- build:js1 scripts/scripts.js -->
 		<script src="scripts/config.js"></script>
 
 		<script src="scripts/base/demo.base.module.js"></script>
 		<script src="scripts/base/authservice.js"></script>
 		<script src="scripts/base/basectrl.js"></script>
 		<script src="scripts/base/loginctrl.js"></script>
+
+		<script src="scripts/shoe/demo.shoe.module.js"></script>
+		<script src="scripts/shoe/shoeservice.js"></script>
+		<script src="scripts/shoe/shoelistctrl.js"></script>
+		<script src="scripts/shoe/viewshoectrl.js"></script>
 
 		<script src="scripts/scripts.js"></script>
         <!-- endbuild -->

@@ -16,8 +16,8 @@ gulp.task('jshint', function () {
 gulp.task('templates',function(){
     //combine all template files of the app into a js file
     gulp.src([pkg.paths.source.templates])
-        .pipe($.angularTemplatecache('servabusi.templates.js',{standalone:true, 
-                                        module:'servabusi.templates'}))
+        .pipe($.angularTemplatecache('demo.templates.js',{standalone:true, 
+                                        module:'demo.templates'}))
         .pipe(gulp.dest(pkg.paths.dest.js));
 });
 
@@ -25,14 +25,15 @@ gulp.task('usemin', ['sass'], function() {
   gulp.src(pkg.paths.source.index)
     .pipe($.usemin({
       css: [$.minifyCss(), 'concat', $.rev()],
-      js: [$.uglify(), $.rev()]
+      js: [$.uglify(), $.rev()],
+      js1: [$.uglify(), $.rev()]
     }))
     .pipe(gulp.dest(pkg.paths.dest.base));
 });
 
 gulp.task('copyviews',function(){
-    gulp.src(pkg.paths.source.html)
-        .pipe(gulp.dest(pkg.paths.dest.html));
+    gulp.src(pkg.paths.source.templates)
+        .pipe(gulp.dest(pkg.paths.dest.base));
 });
 
 gulp.task('copyrootfiles',function(){
@@ -55,8 +56,8 @@ gulp.task('sass', function () {
 gulp.task('webserver', function() {
   gulp.src('build')
     .pipe(webserver({
-      livereload: true,
-      fallback: "testindex.html"
+      livereload: false,
+      fallback: "1.html"
     }));
 });
 

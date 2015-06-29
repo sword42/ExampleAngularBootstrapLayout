@@ -42,7 +42,6 @@
                             "!./app/scripts/lib/**/*.html"
                         ],
             "index": ["./app/index.html"],
-            "html": ["./app/views/**/*"],
             "rootfiles": ["./app/404.html", "./app/favicon.ico", "./app/humans.txt", "./app/robots.txt"],
             "modernizer": ["./app/scripts/lib/modernizr.custom.74608.js"],
             "devfiles": ["./app/testindex.html"],
@@ -51,7 +50,6 @@
         "dest": {
             "base": "./build/",
             "js": "./build/scripts/",
-            "html": "./build/views/",
             "jslib": "./build/scripts/lib/",
             "css": "./build/styles/"
         }

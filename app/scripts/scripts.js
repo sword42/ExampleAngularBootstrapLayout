@@ -1,6 +1,6 @@
 (function () {'use strict';
 angular.module('demo', ['demo.config', 'demo.base', 'demo.shoe', 
-					'ui.router.compat', 'ui.utils', 'angularMoment', 'angular-indi-click', 'ui.bootstrap']);
+					'ui.router.compat', 'angularMoment', 'angular-indi-click', 'ui.bootstrap']);
 
 angular.module('demo').config(ApplicationDef);
 angular.module('demo').run(ApplicationRun);
