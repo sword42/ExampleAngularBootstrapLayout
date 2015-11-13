@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var $ = require("gulp-load-plugins")({lazy:false});
 var pkg = require('./package.json');
-var webserver = require('gulp-webserver');
 
 
 /*
@@ -52,15 +51,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(pkg.paths.dest.css));
 });
 
-
-gulp.task('webserver', function() {
-  gulp.src('build')
-    .pipe(webserver({
-      livereload: false,
-      fallback: "1.html"
-    }));
-});
-
 gulp.task('devfiles', ['default'], function() {
     gulp.src(pkg.paths.source.devfiles)
         .pipe(gulp.dest(pkg.paths.dest.base));
@@ -75,8 +65,13 @@ gulp.task('watch', function () {
     gulp.watch(pkg.paths.source.sass, ['sass']);
 });
 
-gulp.task('serve', ['webserver', 'devfiles', 'watch'], function () {
 
+// Run BrowserSync
+gulp.task('serve', ['devfiles', 'watch'], function () {
+  $.connect.server({
+      port: 8000,
+      root: 'build',
+  });
 });
 
 gulp.task('default', ['copymodernizer', 'jshint', 'copyviews', 'copyrootfiles', 
